@@ -18,8 +18,9 @@ const { label, stock, undefi, rating = 5, newOne = 0, salePrice: discount } = pr
 
 console.log(label, stock, undefi, rating, newOne, discount)
 
-const transaction = (type, { label, stock }) => {
+const transaction = (type, { label, stock = 0 } = {}) => {
     console.log(type, label, stock)
 }
 
 transaction('order', product)
+transaction('order')
