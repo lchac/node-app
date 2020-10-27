@@ -1,5 +1,3 @@
-console.log('Client side Javascript file is loaded!')
-
 const weatherForm = document.querySelector('form')
 const search = document.querySelector('input')
 const forecastParagraph = document.querySelector('.forecast')
@@ -12,7 +10,7 @@ weatherForm.addEventListener('submit', (event) => {
     const location = search.value
     if (location) {
         forecastParagraph.textContent = 'Loading...'
-        const endpoint = `http://localhost:3000/weather?address=${location}`
+        const endpoint = `/weather?address=${location}`
         fetch(endpoint)
             .then((response) => response.json())
             .then((data) => {
