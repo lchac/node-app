@@ -23,12 +23,27 @@
 
 // geocode('Philadelphia', (data) => console.log("data", data))
 
-const add = (a, b, callback) => {
+// const add = (a, b, callback) => {
+//     setTimeout(() => {
+//         const sum = a + b
+//         callback(sum)
+//     }, 2000);
+// }
+
+
+// add(1, 4, (sum) => console.log(sum))
+
+const doWorkCallback = (callback) => {
     setTimeout(() => {
-        const sum = a + b
-        callback(sum)
-    }, 2000);
+        // callback('This is my error')
+        callback(undefined, [1, 2, 3])
+    }, 2000)
 }
 
+doWorkCallback((error, result) => {
+    if (error) {
+        return console.log(error)
+    }
 
-add(1, 4, (sum) => console.log(sum))
+    console.log(result)
+})
