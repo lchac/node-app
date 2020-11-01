@@ -1,4 +1,4 @@
-
+// "C:\Program Files\mongodb-4.4.1\bin\mongod.exe" --dbpath="C:\Program Files\mongodb-4.4.1\data"
 const { MongoClient, ObjectID } = require('mongodb')
 
 const connectionURL = 'mongodb://127.0.0.1:27017'

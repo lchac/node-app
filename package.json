@@ -4,17 +4,21 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "node web-server/src/app.js",
-    "dev": "nodemon web-server/src/app.js -3 js,hbs"
+    "start-ws": "node web-server/src/app.js",
+    "dev-ws": "nodemon web-server/src/app.js -3 js,hbs",
+    "start-tm": "node task-manager/src/index.js",
+    "dev-tm": "nodemon task-manager/src/index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.0.0",
     "chalk": "^4.1.0",
     "express": "^4.17.1",
     "hbs": "^4.1.1",
     "mongodb": "^3.6.2",
+    "mongoose": "^5.10.11",
     "postman-request": "^2.88.1-postman.27",
     "validator": "^13.1.17",
     "yargs": "^16.1.0"
